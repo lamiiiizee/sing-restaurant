@@ -1,0 +1,10 @@
+asgiref==3.6.0
+backports.zoneinfo==0.2.1
+Django==4.2.1
+django-tinymce==3.6.1
+django-versatileimagefield==3.0
+Pillow==9.5.0
+psycopg2-binary==2.9.6
+python-decouple==3.8
+python-magic==0.4.27
+sqlparse==0.4.4

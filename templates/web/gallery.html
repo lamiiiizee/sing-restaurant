@@ -1,0 +1,251 @@
+{% extends 'web/base.html' %} {% load static %} {% block content %}
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+</head>
+
+<body>
+  <!-- app wrapper -->
+  <div class="sb-app">
+    <!-- preloader -->
+
+    <!-- preloader end -->
+    <!-- click effect -->
+
+    <!-- loader -->
+
+    <!-- top bar -->
+
+    <!-- top bar end -->
+
+    <!-- dynamic content -->
+    <div id="sb-dynamic-content" class="sb-transition-fade">
+
+      <!-- banner -->
+      <section class="sb-banner sb-banner-xs sb-banner-color">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- main title -->
+              <div class="sb_main_title_frame">
+                <div class="sb-main-title">
+                  <h1 class="sb_h2 sb-h2">Gallery.</h1>
+
+                </div>
+              </div>
+              <!-- main title end -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- banner end -->
+      <style>
+        .sb-banner.sb-banner-sm .sb_main_title_frame {
+          height: auto;
+          padding: 167px 0px 10px 0px;
+        }
+
+        .sb_h2 {
+          font-size: 30px;
+        }
+
+        .sb-banner.sb-banner-xs .sb_main_title_frame {
+          height: auto;
+          padding: 167px 0px 10px 0px;
+        }
+      </style>
+      <!-- gallery -->
+      <div class="sb-p-90-60">
+        <div class="container">
+          <div class="sb-masonry-grid">
+            <div class="sb-grid-sizer"></div>
+            {% for gallery in gallery %}
+            <div class="sb-grid-item sb-item-33">
+              <div class="sb-gallery-item sb-gallery-vert sb-mb-30">
+                <img src="{{gallery.image.url}}" alt="photo">
+                <!-- button -->
+                <a data-fancybox="gallery" data-no-swup href="{{gallery.image.url}}"
+                  class="sb-btn sb-btn-2 sb-btn-icon sb-btn-gray sb-zoom">
+                  <span class="sb-icon">
+                    <img src="/static/web/image/ui/icons/zoom.svg" alt="icon">
+                  </span>
+                </a>
+                <!-- button end -->
+              </div>
+            </div>
+            {% endfor %}
+            {% comment %}
+            <div class="sb-grid-item sb-item-33">
+              <div class="sb-gallery-item sb-gallery-vert sb-mb-30">
+                <img src="/static/web/image/gallery/2.jpg" alt="photo">
+                <!-- button -->
+                <a data-fancybox="gallery" data-no-swup href="/static/web/image/gallery/2.jpg"
+                  class="sb-btn sb-btn-2 sb-btn-icon sb-btn-gray sb-zoom">
+                  <span class="sb-icon">
+                    <img src="/static/web/image/ui/icons/zoom.svg" alt="icon">
+                  </span>
+                </a>
+                <!-- button end -->
+              </div>
+            </div>
+            <div class="sb-grid-item sb-item-33">
+              <div class="sb-gallery-item sb-mb-30">
+                <img src="/static/web/image/gallery/3.jpg" alt="photo">
+                <!-- button -->
+                <a data-fancybox="gallery" data-no-swup href="/static/web/image/gallery/3.jpg"
+                  class="sb-btn sb-btn-2 sb-btn-icon sb-btn-gray sb-zoom">
+                  <span class="sb-icon">
+                    <img src="/static/web/image/ui/icons/zoom.svg" alt="icon">
+                  </span>
+                </a>
+                <!-- button end -->
+              </div>
+            </div>
+            <div class="sb-grid-item sb-item-33">
+              <div class="sb-gallery-item sb-gallery-vert sb-mb-30">
+                <img src="/static/web/image/gallery/4.jpg" alt="photo">
+                <!-- button -->
+                <a data-fancybox="gallery" data-no-swup href="/static/web/image/gallery/4.jpg"
+                  class="sb-btn sb-btn-2 sb-btn-icon sb-btn-gray sb-zoom">
+                  <span class="sb-icon">
+                    <img src="/static/web/image/ui/icons/zoom.svg" alt="icon">
+                  </span>
+                </a>
+                <!-- button end -->
+              </div>
+            </div>
+            <div class="sb-grid-item sb-item-33">
+              <div class="sb-gallery-item sb-gallery-vert sb-mb-30">
+                <img src="/static/web/image/gallery/5.jpg" alt="photo">
+                <!-- button -->
+                <a data-fancybox="gallery" data-no-swup href="/static/web/image/gallery/5.jpg"
+                  class="sb-btn sb-btn-2 sb-btn-icon sb-btn-gray sb-zoom">
+                  <span class="sb-icon">
+                    <img src="/static/web/image/ui/icons/zoom.svg" alt="icon">
+                  </span>
+                </a>
+                <!-- button end -->
+              </div>
+            </div>
+            <div class="sb-grid-item sb-item-33">
+              <div class="sb-gallery-item sb-mb-30">
+                <img src="/static/web/image/gallery/6.jpg" alt="photo">
+                <!-- button -->
+                <a data-fancybox="gallery" data-no-swup href="/static/web/image/gallery/6.jpg"
+                  class="sb-btn sb-btn-2 sb-btn-icon sb-btn-gray sb-zoom">
+                  <span class="sb-icon">
+                    <img src="/static/web/image/ui/icons/zoom.svg" alt="icon">
+                  </span>
+                </a>
+                <!-- button end -->
+              </div>
+            </div>
+            <div class="sb-grid-item sb-item-33">
+              <div class="sb-gallery-item sb-mb-30">
+                <img src="/static/web/image/gallery/7.jpg" alt="photo">
+                <!-- button -->
+                <a data-fancybox="gallery" data-no-swup href="/static/web/image/gallery/7.jpg"
+                  class="sb-btn sb-btn-2 sb-btn-icon sb-btn-gray sb-zoom">
+                  <span class="sb-icon">
+                    <img src="/static/web/image/ui/icons/zoom.svg" alt="icon">
+                  </span>
+                </a>
+                <!-- button end -->
+              </div>
+            </div>
+            <div class="sb-grid-item sb-item-33">
+              <div class="sb-gallery-item sb-gallery-vert sb-mb-30">
+                <img src="/static/web/image/gallery/8.jpg" alt="photo">
+                <!-- button -->
+                <a data-fancybox="gallery" data-no-swup href="/static/web/image/gallery/8.jpg"
+                  class="sb-btn sb-btn-2 sb-btn-icon sb-btn-gray sb-zoom">
+                  <span class="sb-icon">
+                    <img src="/static/web/image/ui/icons/zoom.svg" alt="icon">
+                  </span>
+                </a>
+                <!-- button end -->
+              </div>
+            </div>
+            <div class="sb-grid-item sb-item-33">
+              <div class="sb-gallery-item sb-mb-30">
+                <img src="/static/web/image/gallery/9.jpg" alt="photo">
+                <!-- button -->
+                <a data-fancybox="gallery" data-no-swup href="/static/web/image/gallery/9.jpg"
+                  class="sb-btn sb-btn-2 sb-btn-icon sb-btn-gray sb-zoom">
+                  <span class="sb-icon">
+                    <img src="/static/web/image/ui/icons/zoom.svg" alt="icon">
+                  </span>
+                </a>
+                <!-- button end -->
+              </div>
+            </div>
+            <div class="sb-grid-item sb-item-33">
+              <div class="sb-gallery-item sb-gallery-vert sb-mb-30">
+                <img src="/static/web/image/gallery/10.jpg" alt="photo">
+                <!-- button -->
+                <a data-fancybox="gallery" data-no-swup href="/static/web/image/gallery/10.jpg"
+                  class="sb-btn sb-btn-2 sb-btn-icon sb-btn-gray sb-zoom">
+                  <span class="sb-icon">
+                    <img src="/static/web/image/ui/icons/zoom.svg" alt="icon">
+                  </span>
+                </a>
+                <!-- button end -->
+              </div>
+            </div>
+            <div class="sb-grid-item sb-item-33">
+              <div class="sb-gallery-item sb-gallery-vert sb-mb-30">
+                <img src="/static/web/image/gallery/11.jpg" alt="photo">
+                <!-- button -->
+                <a data-fancybox="gallery" data-no-swup href="/static/web/image/gallery/11.jpg"
+                  class="sb-btn sb-btn-2 sb-btn-icon sb-btn-gray sb-zoom">
+                  <span class="sb-icon">
+                    <img src="/static/web/image/ui/icons/zoom.svg" alt="icon">
+                  </span>
+                </a>
+                <!-- button end -->
+              </div>
+            </div>
+            <div class="sb-grid-item sb-item-33">
+              <div class="sb-gallery-item sb-mb-30">
+                <img src="/static/web/image/gallery/12.jpg" alt="photo">
+                <!-- button -->
+                <a data-fancybox="gallery" data-no-swup href="/static/web/image/gallery/12.jpg"
+                  class="sb-btn sb-btn-2 sb-btn-icon sb-btn-gray sb-zoom">
+                  <span class="sb-icon">
+                    <img src="/static/web/image/ui/icons/zoom.svg" alt="icon">
+                  </span>
+                </a>
+                <!-- button end -->
+              </div>
+            </div>
+            {% endcomment %}
+          </div>
+
+        </div>
+      </div>
+      <!-- gallery end -->
+
+      <!-- call to action -->
+
+      <!-- call to action end -->
+
+      <!-- footer -->
+
+      <!-- footer end -->
+
+    </div>
+    <!-- dynamic content end -->
+
+  </div>
+  <!-- app wrapper end -->
+
+
+
+</body>
+
+</html>
+{% endblock %}

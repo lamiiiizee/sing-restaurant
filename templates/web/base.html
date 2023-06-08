@@ -1,0 +1,103 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- color of address bar in mobile browser -->
+  <meta name="theme-color" content="#F5C332">
+  <!-- favicon  -->
+  <link rel="shortcut icon" href="/static/web/image/ui/signlogo.png" type="image/x-icon">
+  <!-- font awesome css -->
+  <link rel="stylesheet" href="/static/web/css/plugins/font-awesome.min.css">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="/static/web/css/plugins/bootstrap.min.css">
+  <!-- swiper css -->
+  <link rel="stylesheet" href="/static/web/css/plugins/swiper.min.css">
+  <!-- datepicker css -->
+  <link rel="stylesheet" href="/static/web/css/plugins/datepicker.css">
+  <!-- mapbox css -->
+  <link href="/static/web/css/plugins/mapbox-style.css" rel='stylesheet'>
+  <!-- fancybox css -->
+  <link rel="stylesheet" href="/static/web/css/plugins/fancybox.min.css">
+  <!-- starbelly css -->
+  <link rel="stylesheet" href="/static/web/css/style.css">
+  <!-- page title -->
+  <title>Sign Restaurant</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+  <div id="sb-app" class="sb-app">
+
+    <!-- preloader -->
+    <!-- <div class="sb-preloader">
+      <div class="sb-preloader-bg"></div>
+      <div class="sb-preloader-body">
+        <div class="sb-loading">
+          <div class="sb-percent"><span class="sb-preloader-number" data-count="101">00</span><span>%</span></div>
+        </div>
+        <div class="sb-loading-bar">
+          <div class="sb-bar"></div>
+        </div>
+      </div>
+    </div> -->
+    <!-- preloader end -->
+    <!-- loader -->
+    <!-- <div class="sb-load"></div> -->
+    <!-- top bar -->
+
+    <!-- click effect -->
+    <div class="sb-click-effect"></div>
+    <!-- loader -->
+
+    {% include 'web/partials/header.html' %}
+    {% block content %}
+    {% endblock %}
+    {% include 'web/partials/footer.html' %}
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- jquery js -->
+  <script src="/static/web/js/plugins/jquery.min.js"></script>
+  <!-- smooth scroll js -->
+  <script src="/static/web/js/plugins/smooth-scroll.js"></script>
+  <!-- swup js -->
+  <script src="/static/web/js/plugins/swup.min.js"></script>
+  <!-- swiper js -->
+  <script src="/static/web/js/plugins/swiper.min.js"></script>
+  <!-- datepicker js -->
+  <script src="/static/web/js/plugins/datepicker.js"></script>
+  <!-- isotope js -->
+  <script src="/static/web/js/plugins/isotope.js"></script>
+  <!-- sticky -->
+  <script src="/static/web/js/plugins/sticky.js"></script>
+  <!-- mapbox js -->
+  <script src="/static/web/js/plugins/mapbox.min.js"></script>
+  <!-- fancybox js -->
+  <script src="/static/web/js/plugins/fancybox.min.js"></script>
+  <!-- starbelly js -->
+  <script src="/static/web/js/main.js"></script>
+</body>
+
+</html>

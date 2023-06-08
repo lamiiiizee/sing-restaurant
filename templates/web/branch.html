@@ -1,0 +1,204 @@
+{% extends 'web/base.html' %} {% load static %} {% block content %}
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+</head>
+
+<body>
+  <!-- app wrapper -->
+  <div class="sb-app">
+    <!-- preloader -->
+
+    <!-- preloader end -->
+    <!-- click effect -->
+
+    <!-- loader -->
+
+    <!-- top bar -->
+
+    <!-- top bar end -->
+
+    <!-- dynamic content -->
+    <div id="sb-dynamic-content" class="sb-transition-fade">
+
+      <!-- banner -->
+      <!-- banner -->
+      <section class="sb-banner sb-banner-xs sb-banner-color">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- main title -->
+              <div class="sb-main-title-frame sb-main-title-frame_lamiiz">
+                <div class="sb-main-title">
+                  <h1 class="sb-h2 sb_h2">Our Branches</h1>
+
+                </div>
+              </div>
+              <!-- main title end -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- banner end -->
+      <style>
+        .sb-banner.sb-banner-sm .sb-main-title-frame_lamiiz {
+          height: auto;
+          padding: 167px 0px 10px 0px;
+        }
+
+        .sb_h2 {
+          font-size: 30px;
+        }
+
+        .sb-banner.sb-banner-xs .sb-main-title-frame_lamiiz {
+          height: auto;
+          padding: 167px 0px 10px 0px;
+        }
+      </style>
+      <!-- banner end -->
+
+      <!-- shop list -->
+      <section class="sb-menu-section branch_grids sb-p-90-60">
+        <div class="sb-bg-1">
+          <div></div>
+        </div>
+
+
+        <div class="container">
+          <div class="row">
+            {% for branch in branch %}
+            <div class="col-lg-4 branch_grid_one">
+              <div class="sb-menu-item sb-mb-30">
+                <a data-fancybox="menu" data-no-swup href="{{branch.image.url}}" class="sb-cover-frame sb-cover-frame_lamiiz">
+                  <img src="{{branch.image.url}}" alt="product">
+                </a>
+                <div class="sb-card-tp">
+                  <h4 class="sb-card-title sb-card-title_lamiiz">
+                    <a data-fancybox="menu" data-no-swup href="{{branch.image.url}}">{{branch.name}}</a>
+                  </h4>
+                  <div class="sb_price_lamiiz">
+                    <sub></sub>
+                  </div>
+                </div>
+                <div class="sb-description">
+                  <p class="sb-text sb-mb-15">{{branch.location}}</p>
+                </div>
+              </div>
+              <h4 class="sb-mb-5"><a class="sb-text" href="tel:{{branch.branch_contact_number_1}}">{{branch.branch_contact_number_1}}</a></h4>
+              {% if branch.branch_contact_number_2 %}
+              <h4 class="sb-mb-0"><a class="sb-text" href="tel:{{branch.branch_contact_number_2}}">{{branch.branch_contact_number_2}}</a></h4>
+              {% endif %}
+            </div>
+            {% endfor %}
+
+            {% comment %}
+            <div class="col-lg-4 branch_grid_one">
+              <div class="sb-menu-item sb-mb-30"><a href="product.html"
+                  class="sb-cover-frame sb-cover-frame_lamiiz"><img src="/static/web/image/menu/branch-2.png"
+                    alt="product">
+                </a>
+                <div class="sb-card-tp">
+                  <h4 class="sb-card-title"><a href="product.html">Saumon Gravlax</a></h4>
+                  <div class="sb_price_lamiiz"><sub></sub></div>
+                </div>
+                <div class="sb-description">
+                  <p class="sb-text sb-mb-15"><span>tomatoes</span>,
+                    <span>nori</span>,
+                    <span>feta cheese</span>,
+                    <span>mushrooms</span>,
+                    <span>rice noodles</span>,
+                    <span>corn</span>,
+                    <span>shrimp</span>.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 branch_grid_one">
+              <div class="sb-menu-item sb-mb-30"><a href="product.html"
+                  class="sb-cover-frame sb-cover-frame_lamiiz"><img src="/static/web/image/menu/branch-1.png"
+                    alt="product"></a>
+                <div class="sb-card-tp">
+                  <h4 class="sb-card-title"><a href="product.html">Stracciatella</a></h4>
+                  <div class="sb_price_lamiiz"><sub></sub></div>
+                </div>
+                <div class="sb-description">
+                  <p class="sb-text sb-mb-15"><span>tomatoes</span>,
+                    <span>nori</span>,
+                    <span>feta cheese</span>,
+                    <span>mushrooms</span>,
+                    <span>rice noodles</span>,
+                    <span>corn</span>,
+                    <span>shrimp</span>.
+                  </p>
+                </div>
+              </div>
+            </div>
+            {% endcomment %}
+          </div>
+          <style>
+            .branch_grids {
+              margin-top: 0px;
+            }
+
+            .branch_grid_one {
+              padding: 20px;
+            }
+
+            .sb-menu-item .sb-card-tp .sb_price_lamiiz {
+              width: 60px;
+              height: 60px;
+              font-weight: 500;
+              background-color: #f2f3f5;
+              font-size: 24px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .sb-menu-item .sb-cover-frame_lamiiz {
+              display: block;
+              background-color: #F2F3F5;
+              overflow: hidden;
+              position: relative;
+              padding-bottom: 65%;
+              transition: 0.3s ease-in-out;
+            }
+
+            @media (max-width: 425px) {
+              .branch_grid_one {
+                padding: 0;
+              }
+
+              .branch_grids {
+                margin-top: 0px;
+              }
+            }
+          </style>
+        </div>
+      </section>
+      <!-- shop list end -->
+
+      <!-- call to action -->
+
+      <!-- call to action end -->
+
+      <!-- footer -->
+
+      <!-- footer end -->
+
+    </div>
+    <!-- dynamic content end -->
+
+  </div>
+  <!-- app wrapper end -->
+
+
+</body>
+
+</html>
+{% endblock %}

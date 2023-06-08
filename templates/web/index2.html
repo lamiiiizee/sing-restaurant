@@ -1,0 +1,600 @@
+{% extends 'web/base.html' %} {% load static %} {% block content %}
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+</head>
+
+<body>
+  <!-- app wrapper -->
+  <div class="sb-app">
+    <!-- preloader -->
+
+    <!-- preloader end -->
+    <!-- click effect -->
+    <!-- loader -->
+
+    <!-- top bar -->
+
+    <!-- top bar end -->
+
+    <!-- dynamic content -->
+    <div id="sb-dynamic-content" class="sb-transition-fade margintop-lamiiz">
+
+      <!-- banner -->
+      <section class="sb-banner image-layer">
+        <div class="sb-bg-0">
+          <div></div>
+        </div>
+        <style>
+          .image-layer {
+            background-image: url(/static/web/image/the-rice-boat.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+
+
+          .image-layer {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 150px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: opacity 1500ms ease-in, -webkit-transform 7000ms ease;
+            transition: opacity 1500ms ease-in, -webkit-transform 7000ms ease;
+            transition: transform 7000ms ease, opacity 1500ms ease-in;
+            transition: transform 7000ms ease, opacity 1500ms ease-in, -webkit-transform 7000ms ease;
+            z-index: 1;
+          }
+
+
+
+          .image-layer:before {
+            position: absolute;
+            left: -1px;
+            top: 0px;
+            bottom: 0;
+            right: 0;
+            content: "";
+            background-image: -moz-linear-gradient(-1deg, rgb(28, 27, 31) 0%, rgba(28, 27, 31, 0) 100%);
+            background-image: -webkit-linear-gradient(-1deg, rgb(0 0 0) 0%, rgb(0 0 0 / 23%) 100%);
+            background-image: -ms-linear-gradient(-1deg, rgb(28, 27, 31) 0%, rgba(28, 27, 31, 0) 100%);
+            z-index: -1;
+          }
+
+          .image-layer:after {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            bottom: 0;
+            right: 0;
+            content: "";
+            background-color: rgba(var(--nayel-black-rgb), .30);
+            z-index: -1;
+          }
+
+          .sb-h1 span,
+          h1 span {
+            background-color: #f9fafc00 !important;
+          }
+
+          .sb-h1 span,
+          h1 {
+            color: #ffffff !important;
+          }
+
+          .sb-bg-1 div:after {
+
+            background-color: #f9fafc00 !important;
+
+          }
+
+          .sb-top-bar-frame .sb-top-bar-bg {
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff3b !important;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+          }
+
+          .sb-top-bar-frame {
+            width: 100%;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-bottom: solid 1px #f2f3f500 !important;
+            border-top: solid 0px #f2f3f500 !important;
+          }
+          .sb-suptitle {
+            display: inline-block;
+            padding: 2px 5px;
+            background-color: #f2f3f500 !important;
+            color: #ffffff !important;
+            font-size: 12px;
+            font-weight: 400;
+            color: #231E41;
+          }
+          .sb-text_lamiiz{
+            color: #ffffff;
+          }
+          .sb-btn .about_us{
+            color: #ffffff;
+
+          }
+        </style>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <!-- main title -->
+              <div class="sb-main-title-frame">
+                <div class="sb-main-title">
+                  <span class="sb-suptitle sb-mb-30">Hi, Welcome to Sign Restaurant!</span>
+                  <h1 class="sb-mb-30">We do not <span>cook</span>, <br>we <span>create</span> your <br>emotions!</h1>
+                  <p class="sb-text sb-text_lamiiz sb-text-lg sb-mb-30">We Creating unforgettable dining <br> experiences</p>
+                  <!-- button -->
+                  <a href=" {% url 'web:menu'  %}" class="sb-btn">
+                    <span class="sb-icon">
+                      <img src="/static/web/image/ui/icons/menu.svg" alt="icon">
+                    </span>
+                    <span>Our menu</span>
+                  </a>
+                  <!-- button end -->
+                  <!-- button -->
+                  <a href=" {% url 'web:about'  %}" class="sb-btn sb-btn-2 sb-btn-gray">
+                    <span class="sb-icon">
+                      <img src="/static/web/image/ui/icons/arrow.svg" alt="icon">
+                    </span>
+                    <span class="about_us">About us</span>
+                  </a>
+                  <!-- button end -->
+                </div>
+              </div>
+              <!-- main title end -->
+            </div>
+            <div class="col-lg-6">
+              <div class="sb-ilustration-fix sb-ilustration-fix_lammiiz">
+                <div class="sb-illustration-1-2">
+                  <!-- <img src="/static/web/image/illustrations/1.png" alt="food" class="sb-food-1"> -->
+                  <!-- <img src="/static/web/image/illustrations/2.png" alt="food" class="sb-food-2"> -->
+                  <!-- <img src="/static/web/image/illustrations/3.png" alt="food" class="sb-food-3"> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- banner end -->
+      <style>
+        .margintop-lamiiz {
+          margin-top: 0px;
+        }
+
+        @media (max-width: 991px) {
+          .margintop-lamiiz {
+            margin-top: 0px;
+          }
+        }
+      </style>
+      <!-- About text -->
+      <section class="sb-about-text sb-p-90-0">
+        <div class="sb-bg-1" style="margin-top: 90px">
+          <div></div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="sb-illustration-2 sb-mb-90">
+                <div class="sb-interior-frame">
+                  <img src="/static/web/image/gallery/Frame_16463-min.png" alt="interior" class="sb-interior"
+                    style="object-position: center">
+                </div>
+                <div class="sb-square"></div>
+                <div class="sb-experience">
+                  <div class="sb-exp-content">
+                    <p class="sb-h1 sb-mb-10">17</p>
+                    <p class="sb-h3">Years Experiense</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-lg-6 align-self-center sb-mb-60">
+              <h2 class="sb-mb-60">Experience our Unforgettable <br>flavors & exceptional service</h2>
+              <p class="sb-text sb-mb-30">Welcome to "Sign Restaurant" where we pride ourselves on serving exceptional
+                cuisine in a warm and inviting atmosphere. Our restaurant features a modern yet cosy interior, with
+                comfortable seating and stylish decor that creates the perfect ambience for a memorable dining
+                experience. Our menu boasts a wide variety of mouth-watering dishes, expertly prepared by our talented
+                chefs using only the freshest ingredients. From hearty entrées to delicious appetizers and decadent
+                desserts, there's something for everyone at Delicious Bites.</p>
+              <p class="sb-text sb-mb-60">Whether you're looking for a romantic dinner for two, a family celebration, or
+                a night out with friends, our friendly staff is ready to make your visit truly unforgettable. And with
+                our extensive selection of wines and cocktails, you can pair your meal with the perfect drink to
+                complement your palate.</p>
+              <p class="sb-text sb-mb-60">So why wait? Come and enjoy a meal at Sign Restaurant, and discover why we're
+                one of the most popular restaurants in town.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About text end -->
+
+      <!-- features -->
+      <section class="sb-features sb-p-0-30">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="sb-features-item sb-mb-60">
+                <div class="sb-number">01</div>
+                <div class="sb-feature-text">
+                  <h3 class="sb-mb-15">Kid-friendly menu</h3>
+                  <p class="sb-text">We special menu for children featuring familiar dishes in smaller portions at
+                    affordable prices, with fun elements to keep them entertained.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="sb-features-item sb-mb-60">
+                <div class="sb-number">02</div>
+                <div class="sb-feature-text">
+                  <h3 class="sb-mb-15">Large group seating</h3>
+                  <p class="sb-text">Our restaurants offer large tables or booths for accommodating families and groups,
+                    ensuring a comfortable and enjoyable dining experience for everyone.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="sb-features-item sb-mb-60">
+                <div class="sb-number">03</div>
+                <div class="sb-feature-text">
+                  <h3 class="sb-mb-15">Affordable pricing</h3>
+                  <p class="sb-text">Our restaurants provide affordable pricing options to fit within a family's budget,
+                    making it easier to enjoy a meal out without breaking the bank.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="sb-features-item sb-mb-60">
+                <div class="sb-number">04</div>
+                <div class="sb-feature-text">
+                  <h3 class="sb-mb-15">Fast service</h3>
+                  <p class="sb-text">Our restaurants prioritize fast service to accommodate families with young children
+                    who may be impatient or easily distracted, ensuring a quick and efficient dining experience.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="sb-features-item sb-mb-60">
+                <div class="sb-number">05</div>
+                <div class="sb-feature-text">
+                  <h3 class="sb-mb-15">Healthy menu options</h3>
+                  <p class="sb-text">A family-friendly atmosphere in our restaurants caters to the needs and preferences
+                    of families, creating a warm, welcoming, and inviting environment suitable for all ages.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="sb-features-item sb-mb-60">
+                <div class="sb-number">06</div>
+                <div class="sb-feature-text">
+                  <h3 class="sb-mb-15">Family-friendly atmosphere</h3>
+                  <p class="sb-text">Our restaurants offer healthier options on their menu, such as salads, grilled
+                    meats, and vegetarian or vegan dishes, to cater to health-conscious families.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="sb-features-item sb-mb-60">
+                <div class="sb-number">07</div>
+                <div class="sb-feature-text">
+                  <h3 class="sb-mb-15">Family restrooms</h3>
+                  <p class="sb-text">Family restrooms are a feature in restaurants that provide private and spacious
+                    facilities for families, equipped with amenities such as changing tables and additional seating.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="sb-features-item sb-mb-60">
+                <div class="sb-number">08</div>
+                <div class="sb-feature-text">
+                  <h3 class="sb-mb-15">Home Delivery </h3>
+                  <p class="sb-text">Our restaurant home delivery services provide customers with the convenience of
+                    ordering meals online or over the phone and receiving them at their doorstep, without having to
+                    leave their homes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- features end -->
+
+      <!-- short menu -->
+      <section class="sb-short-menu sb-p-0-90">
+        <div class="sb-bg-2">
+          <div></div>
+        </div>
+        <div class="container">
+          <div class="sb-group-title sb-mb-30">
+            <div class="sb-left sb-mb-30">
+              <h2 class="sb-mb-30">Discover <span>Our Delicious</span> Dishes</h2>
+              <p class="sb-text">From appetizers to desserts, our menu is filled with tasty <br>options that are sure to
+                delight your taste buds.</p>
+            </div>
+            <div class="sb-right sb-mb-30">
+              <!-- slider navigation -->
+              <div class="sb-slider-nav">
+                <div class="sb-prev-btn sb-short-menu-prev"><i class="fas fa-arrow-left"></i></div>
+                <div class="sb-next-btn sb-short-menu-next"><i class="fas fa-arrow-right"></i></div>
+              </div>
+              <!-- slider navigation end -->
+              <!-- button -->
+              <a href=" {% url 'web:menu'  %}" class="sb-btn">
+                <span class="sb-icon">
+                  <img src="/static/web/image/ui/icons/menu.svg" alt="icon">
+                </span>
+                <span>Full menu</span>
+              </a>
+              <!-- button end -->
+            </div>
+          </div>
+          <div class="swiper-container sb-short-menu-slider-3i">
+            <div class="swiper-wrapper">
+              {% for menu in menu %}
+              <div class="swiper-slide swiper-slide_lamiiz">
+                <a data-fancybox="menu" data-no-swup href="{{menu.image.url}}" class="sb-menu-item">
+                  <div class="sb-cover-frame">
+                    <img src="{{menu.image.url}}" alt="product">
+                  </div>
+                  <div class="sb-card-tp">
+                    <h3 class="sb-card-title">{{menu.name}}</h3>
+                    <div class="sb-price"><sub></sub></div>
+                  </div>
+                </a>
+              </div>
+              {% endfor %}
+              {% comment %}
+              <div class="swiper-slide">
+                <a data-fancybox="menu" data-no-swup href="/static/web/image/menu/2.jpg" class="sb-menu-item">
+                  <div class="sb-cover-frame">
+                    <img src="/static/web/image/menu/2.jpg" alt="product">
+                    <div class="sb-badge sb-vegan"><i class="fas fa-leaf"></i> Vegan</div>
+                  </div>
+                  <div class="sb-card-tp">
+                    <h3 class="sb-card-title">Saumon Gravlax</h3>
+                    <div class="sb-price"><sub>$</sub> 9</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a data-fancybox="menu" data-no-swup href="/static/web/image/menu/3.jpg" class="sb-menu-item">
+                  <div class="sb-cover-frame">
+                    <img src="/static/web/image/menu/3.jpg" alt="product">
+                    <div class="sb-badge sb-hot"><i class="fas fa-pepper-hot"></i> Hot</div>
+                  </div>
+                  <div class="sb-card-tp">
+                    <h3 class="sb-card-title">Croustillant de poisson</h3>
+                    <div class="sb-price"><sub>$</sub> 4</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a data-fancybox="menu" data-no-swup href="/static/web/image/menu/4.jpg" class="sb-menu-item">
+                  <div class="sb-cover-frame">
+                    <img src="/static/web/image/menu/4.jpg" alt="product">
+                  </div>
+                  <div class="sb-card-tp">
+                    <h3 class="sb-card-title">Stracciatella</h3>
+                    <div class="sb-price"><sub>$</sub> 11</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a data-fancybox="menu" data-no-swup href="/static/web/image/menu/5.jpg" class="sb-menu-item">
+                  <div class="sb-cover-frame">
+                    <img src="/static/web/image/menu/5.jpg" alt="product">
+                    <div class="sb-badge sb-vegan"><i class="fas fa-leaf"></i> Vegan</div>
+                  </div>
+                  <div class="sb-card-tp">
+                    <h3 class="sb-card-title">Carpaccio de daurade</h3>
+                    <div class="sb-price"><sub>$</sub> 6</div>
+                  </div>
+                </a>
+              </div>
+              {% endcomment %}
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- short menu end -->
+      <style>
+        .swiper-slide_lamiiz {
+          width: 266px !important;
+          margin-right: 30px !important;
+        }
+      </style>
+      <!-- revievs -->
+      <section class="sb-reviews sb-p-0-90">
+        <div class="container">
+          <div class="sb-group-title sb-mb-30">
+            <div class="sb-left sb-mb-30">
+              <h2 class="sb-mb-30">Happy <span>customers,</span> happy us</h2>
+              <p class="sb-text">Our customers' satisfaction <br>is our ultimate goal. Read their testimonials to see
+                how we're doing.</p>
+            </div>
+            <div class="sb-right sb-mb-30">
+              <!-- slider navigation -->
+              <div class="sb-slider-nav">
+                <div class="sb-prev-btn sb-reviews-prev"><i class="fas fa-arrow-left"></i></div>
+                <div class="sb-next-btn sb-reviews-next"><i class="fas fa-arrow-right"></i></div>
+              </div>
+              <!-- slider navigation end -->
+              <!-- button -->
+
+              <!-- button end -->
+            </div>
+          </div>
+          <div class="swiper-container sb-reviews-slider">
+            <div class="swiper-wrapper">
+              {% for review in review %}
+              <div class="swiper-slide">
+                <div class="sb-review-card">
+                  <div class="sb-review-header sb-mb-15">
+                    <h4 class="sb-mb-15">{{review.massage}}</h4>
+
+                  </div>
+                  <p class="sb-text sb-mb-15">{{review.review}}</p>
+                  <div class="sb-author-frame">
+                    <div class="sb-avatar-frame">
+                      <img src="{{review.Guest.url}}" alt="Guest">
+                    </div>
+                    <h4>{{review.Guest_name}}</h4>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+
+
+              {% comment %}
+              <div class="swiper-slide">
+                <div class="sb-review-card">
+                  <div class="sb-review-header sb-mb-15">
+                    <h4 class="sb-mb-15">I have lunch here every day</h4>
+
+                  </div>
+                  <p class="sb-text sb-mb-15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis fugiat
+                    totam nobis quas unde excepturi inventore possimus laudantium provident, rem eligendi velit. Aut
+                    molestias, ipsa itaque laborum, natus
+                    tempora, ut soluta animi ducimus dignissimos deserunt doloribus in reprehenderit rem accusamus!
+                    Quibusdam labore, aliquam dolor harum!</p>
+                  <div class="sb-author-frame">
+                    <div class="sb-avatar-frame">
+                      <img src="/static/web/image/faces/2.jpg" alt="Guest">
+                    </div>
+                    <h4>Paul Trueman</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="sb-review-card">
+                  <div class="sb-review-header sb-mb-15">
+                    <h4 class="sb-mb-15">Great service</h4>
+
+                  </div>
+                  <p class="sb-text sb-mb-15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis fugiat
+                    totam nobis quas unde excepturi inventore possimus laudantium provident, rem eligendi velit. Aut
+                    molestias, ipsa itaque laborum, natus
+                    tempora, ut soluta animi ducimus dignissimos deserunt doloribus in reprehenderit rem accusamus!
+                    Quibusdam labore, aliquam dolor harum!</p>
+                  <div class="sb-author-frame">
+                    <div class="sb-avatar-frame">
+                      <img src="/static/web/image/faces/3.jpg" alt="Guest">
+                    </div>
+                    <h4>Viktoria Freeman</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="sb-review-card">
+                  <div class="sb-review-header sb-mb-15">
+                    <h4 class="sb-mb-15">Sign is amazing!</h4>
+
+                  </div>
+                  <p class="sb-text sb-mb-15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis fugiat
+                    totam nobis quas unde excepturi inventore possimus laudantium provident, rem eligendi velit. Aut
+                    molestias, ipsa itaque laborum, natus
+                    tempora, ut soluta animi ducimus dignissimos deserunt doloribus in reprehenderit rem accusamus!
+                    Quibusdam labore, aliquam dolor harum!</p>
+                  <div class="sb-author-frame">
+                    <div class="sb-avatar-frame">
+                      <img src="/static/web/image/faces/4.jpg" alt="Guest">
+                    </div>
+                    <h4>Audrey Oldman</h4>
+                  </div>
+                </div>
+              </div>
+              {% endcomment %}
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- revievs end -->
+
+      <!-- call to action -->
+      <section class="sb-call-to-action">
+        <div class="sb-bg-3"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="sb-cta-text">
+                <h2 class="sb-h1 sb-mb-30">Free delivery service.</h2>
+                <!-- button -->
+                <div class="contact_and_menu">
+                  <a href="#" class="sb-btn sb_btn_lamiiz">
+                    <span>Order delivery</span>
+                  </a>
+                  <!-- button end -->
+
+                  <!-- button -->
+
+                </div>
+                <!-- button end -->
+
+                <style>
+                  .contact_and_menu {
+                    display: flex;
+                  }
+
+                  .sb_btn_lamiiz span {
+                    white-space: nowrap;
+                    line-height: 55px;
+                    display: inline-block;
+                    padding: 0 20px 0 20px;
+                    font-weight: 500;
+                  }
+                </style>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="sb-illustration-8">
+                <img src="/static/web/image/illustrations/delivery img.png" alt="reserved" class="sb-reserved">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- call to action end -->
+
+      <!-- footer -->
+
+      <!-- footer end -->
+
+    </div>
+    <!-- dynamic content end -->
+
+    <!-- discount popup -->
+
+    <!-- discount popup end -->
+
+  </div>
+  <!-- app wrapper end -->
+
+
+
+</body>
+
+</html>
+{% endblock %}

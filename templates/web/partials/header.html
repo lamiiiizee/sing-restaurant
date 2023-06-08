@@ -1,0 +1,80 @@
+{% load static %}
+<div class="sb-top-bar-frame">
+  <div class="sb-top-bar-bg"></div>
+  <div class="container">
+    <div class="sb-top-bar">
+      <a href="{% url 'web:index' %}" class="sb-logo-frame">
+        <!-- logo img -->
+        <img src="/static/web/image/ui/sign logo.png" alt="Sign" />
+      </a>
+      <!-- menu -->
+      <div class="sb-right-side">
+        <nav id="sb-dynamic-menu" class="sb-menu-transition">
+          <ul class="sb-navigation">
+            <li class="">
+              {% url 'web:index' as index_url %}
+              <a class="{% if request.path == index_url %}active{% endif %}" href="{{ index_url }}" data-page="home"
+                data-single="true">
+                <span class="">Home</span>
+              </a>
+            </li>
+            <li>
+              {% url 'web:about' as about_url %}
+              <a class="{% if request.path == about_url %}active{% endif %}" href="{{ about_url }}" data-page="home"
+                data-single="true">
+                <span class="">About</span>
+              </a>
+            </li>
+            <li>
+              {% url 'web:menu' as menu_url %}
+              <a class="{% if request.path == menu_url %}active{% endif %}" href="{{ menu_url }}" data-page="home"
+                data-single="true">
+                <span class="">Menu</span>
+              </a>
+            </li>
+            <li>
+              {% url 'web:branch' as branch_url %}
+              <a class="{% if request.path == branch_url %}active{% endif %}" href="{{ branch_url }}" data-page="home"
+                data-single="true">
+                <span class="">Branches</span>
+              </a>
+            </li>
+            <li>
+              {% url 'web:gallery' as gallery_url %}
+              <a class="{% if request.path == gallery_url %}active{% endif %}" href="{{ gallery_url }}" data-page="home"
+                data-single="true">
+                <span class="">Gallery</span>
+              </a>
+            </li>
+            <li>
+              {% url 'web:contact' as contact_url %}
+              <a class="{% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}" data-page="home"
+                data-single="true">
+                <span class="">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <style>
+          .sb-navigation .active {
+            color: #f5c332;
+          }
+        </style>
+        <div class="sb-buttons-frame">
+          <!-- button -->
+
+          <!-- button end -->
+          <!-- menu btn -->
+          <div class="sb-menu-btn"><span></span></div>
+          <!-- info btn -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- info bar -->
+
+  <!-- info bar end -->
+  <!-- minicart -->
+  
+  <!-- minicart end -->
+</div>
