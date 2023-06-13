@@ -1,0 +1,142 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <!-- <link rel="stylesheet" type="text/css" href="https://www.magictoolbox.com/magiczoom/magiczoom.css" /> -->
+  <style>
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .menu-pdf-image {
+      display: flex;
+      flex-direction: column;
+      gap: 70px;
+    }
+
+    .zoomable-image {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- app wrapper -->
+  <div class="sb-app">
+    <!-- preloader -->
+
+    <!-- preloader end -->
+    <!-- click effect -->
+    <!-- loader -->
+
+    <!-- top bar -->
+
+    <!-- top bar end -->
+
+    <!-- dynamic content -->
+    <div id="sb-dynamic-content" class="sb-transition-fade">
+
+      <!-- banner -->
+      <section class="sb-banner sb-banner-xs sb-banner-color">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- main title -->
+              <div class="sb-main-title-frame sb-main-title-frame_lamiiz">
+                <div class="sb-main-title">
+                  <h1 class="sb-h2 sb_h2">Our menu</h1>
+                </div>
+              </div>
+              <!-- main title end -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- banner end -->
+      <style>
+        .sb-banner.sb-banner-sm .sb-main-title-frame_lamiiz {
+          height: auto;
+          padding: 167px 0px 10px 0px;
+        }
+
+        .sb_h2 {
+          font-size: 30px;
+        }
+
+        .sb-banner.sb-banner-xs .sb-main-title-frame_lamiiz {
+          height: auto;
+          padding: 167px 0px 10px 0px;
+        }
+      </style>
+      <!-- menu section 1 -->
+      <section class="sb-menu-section sb-p-90-60">
+        <div class="sb-bg-1">
+          <div></div>
+        </div>
+        <div class="container">
+          <div class="container menu-pdf-image">
+            <div class="zoomable-image" onmousemove="zoomImage(event)" onmouseleave="zoomOutImage(event)">
+              <img src="/static/web/pdf/download.png" alt="">
+            </div>
+            <div class="zoomable-image" onmousemove="zoomImage(event)" onmouseleave="zoomOutImage(event)">
+              <img src="/static/web/pdf/download (1).png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- menu end -->
+
+      <!-- promo -->
+
+      <!-- promo end -->
+
+      <!-- footer -->
+
+      <!-- footer end -->
+
+    </div>
+    <!-- dynamic content end -->
+
+  </div>
+  <!-- app wrapper end -->
+
+  <!-- <script src="https://www.magictoolbox.com/magiczoom/magiczoom.js"></script> -->
+
+
+</body>
+<script>
+  function zoomImage(event) {
+    const container = event.currentTarget;
+    const image = container.querySelector('img');
+    const rect = container.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const scale = 3;
+
+    const transformOriginX = `${(x / rect.width) * 100}%`;
+    const transformOriginY = `${(y / rect.height) * 100}%`;
+    const transform = `scale(${scale})`;
+    const transformOrigin = `${transformOriginX} ${transformOriginY}`;
+
+    image.style.transform = transform;
+    image.style.transformOrigin = transformOrigin;
+  }
+
+  function zoomOutImage(event) {
+    const container = event.currentTarget;
+    const image = container.querySelector('img');
+    const scale = 1;
+
+    image.style.transform = `scale(${scale})`;
+    image.style.transformOrigin = 'center';
+  }
+</script>
+
+</html>
+{% endblock %}

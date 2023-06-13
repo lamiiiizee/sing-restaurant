@@ -1,0 +1,117 @@
+{% extends 'web/base.html' %} {% load static %} {% block content %}
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+</head>
+
+<body>
+  <!-- app wrapper -->
+  <div class="sb-app">
+    <!-- preloader -->
+
+    <!-- preloader end -->
+    <!-- click effect -->
+    <!-- loader -->
+
+    <!-- top bar -->
+
+    <!-- top bar end -->
+
+    <!-- dynamic content -->
+    <div id="sb-dynamic-content" class="sb-transition-fade">
+
+      <!-- banner -->
+      <section class="sb-banner sb-banner-xs sb-banner-color">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- main title -->
+              <div class="sb-main-title-frame sb-main-title-frame_lamiiz">
+                <div class="sb-main-title">
+                  <h1 class="sb-h2 sb_h2">Our menu</h1>
+                  
+                </div>
+              </div>
+              <!-- main title end -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- banner end -->
+      <style>
+        .sb-banner.sb-banner-sm .sb-main-title-frame_lamiiz {
+          height: auto;
+          padding: 167px 0px 10px 0px;
+        }
+
+        .sb_h2 {
+          font-size: 30px;
+        }
+
+        .sb-banner.sb-banner-xs .sb-main-title-frame_lamiiz {
+          height: auto;
+          padding: 167px 0px 10px 0px;
+        }
+      </style>
+      <!-- menu section 1 -->
+      <section class="sb-menu-section sb-p-90-60">
+        <div class="sb-bg-1">
+          <div></div>
+        </div>
+        <div class="container">
+          <!-- filter -->
+          <div class="sb-filter mb-30">
+            <a href="#." data-filter="*" class="sb-filter-link sb-active">All dishes</a>
+            <a href="#." data-filter=".starters" class="sb-filter-link">Starters</a>
+            <a href="#." data-filter=".main-dishes" class="sb-filter-link">Main dishes</a>
+            <a href="#." data-filter=".drinks" class="sb-filter-link">Drinks</a>
+            <a href="#." data-filter=".desserts" class="sb-filter-link">Dessert</a>
+            <a href="#." data-filter=".icecream" class="sb-filter-link">icecream</a>
+          </div>
+          <!-- filter end -->
+          <div class="sb-masonry-grid">
+            <div class="sb-grid-sizer"></div>
+
+            {% for menu in menu %}
+            <div class="sb-grid-item sb-item-25 {{menu.ClassName}} ">
+           
+              <a data-fancybox="menu" data-no-swup href="{{menu.image.url}}" class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame">
+                  <img src="{{menu.image.url}}" alt="product">
+                </div>
+                <div class="sb-card-tp">
+                  <h4 class="sb-card-title">{{menu.name}}</h4>
+                  <div class="sb-price"><sub></sub></div>
+                </div>
+              </a>
+            </div>
+             {% endfor %}
+             
+          </div>
+        </div>
+      </section>
+      <!-- menu end -->
+
+      <!-- promo -->
+      
+      <!-- promo end -->
+
+      <!-- footer -->
+
+      <!-- footer end -->
+
+    </div>
+    <!-- dynamic content end -->
+
+  </div>
+  <!-- app wrapper end -->
+
+
+</body>
+
+</html>
+{% endblock %}
